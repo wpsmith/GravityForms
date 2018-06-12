@@ -43,6 +43,11 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
 		 * GravityFormsPersonalData constructor.
 		 */
 		protected function __construct() {
+			$extend = new ExtendPlugin( 'gravityforms/gravityforms.php', __FILE__, '2.3.2', 'wps-plugins' );
+
+			if ( ! $extend->is_active() ) {
+				return;
+			}
 
 			add_action( 'wp_privacy_personal_data_exporters', array( $this, 'register_gdpr_exporter' ), 100 );
 			add_filter( 'wps_gravityforms_export_personal_data_value', array( $this, 'personal_data_value' ), 10, 4 );

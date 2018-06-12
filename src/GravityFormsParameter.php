@@ -37,6 +37,11 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsParameter' ) ) {
 		 * @param string|callable $value_or_callback Callback to set the value or value.
 		 */
 		public function __construct( $parameter, $value_or_callback ) {
+			$extend = new ExtendPlugin( 'gravityforms/gravityforms.php', __FILE__, '2.3.2', 'wps-plugins' );
+
+			if ( ! $extend->is_active() ) {
+				return;
+			}
 
 			$this->parameter         = $parameter;
 			$this->value_or_callback = $value_or_callback;

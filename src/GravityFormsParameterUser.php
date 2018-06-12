@@ -38,6 +38,12 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsParameterUser' ) ) {
 		 * @param string $user_meta_field User meta field key.
 		 */
 		public function __construct( $parameter, $user_field, $user_meta_field = '' ) {
+			$extend = new ExtendPlugin( 'gravityforms/gravityforms.php', __FILE__, '2.3.2', 'wps-plugins' );
+
+			if ( ! $extend->is_active() ) {
+				return;
+			}
+
 			$this->user_field      = $user_field;
 			$this->user_meta_field = $user_meta_field;
 
