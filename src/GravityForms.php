@@ -38,11 +38,11 @@ if ( ! class_exists( 'WPS\Plugins\GravityForms' ) ) {
 		 * GravityForms constructor.
 		 */
 		public function __construct() {
-			$extend = new ExtendPlugin( 'gravityforms/gravityforms.php', __FILE__, '2.3.2', 'wps-plugins' );
-
-			if ( $extend->is_active() ) {
-				add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+			if ( ! is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
+				return;
 			}
+
+			add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 		}
 
 	}

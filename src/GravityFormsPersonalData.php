@@ -43,9 +43,8 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
 		 * GravityFormsPersonalData constructor.
 		 */
 		protected function __construct() {
-			$extend = new ExtendPlugin( 'gravityforms/gravityforms.php', __FILE__, '2.3.2', 'wps-plugins' );
 
-			if ( ! $extend->is_active() ) {
+			if ( ! is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
 				return;
 			}
 
