@@ -234,12 +234,12 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
 		 */
 		private function get_labels() {
 			return array(
-				'form_id'          => __( 'Form ID', WPSCORE_PLUGIN_DOMAIN ),
-				'date_updated'     => __( 'Date Updated', WPSCORE_PLUGIN_DOMAIN ),
-				'currency'         => __( 'Currency', WPSCORE_PLUGIN_DOMAIN ),
-				'payment_method'   => __( 'Payment Method', WPSCORE_PLUGIN_DOMAIN ),
-				'transaction_type' => __( 'Transaction Type', WPSCORE_PLUGIN_DOMAIN ),
-				'status'           => __( 'Status', WPSCORE_PLUGIN_DOMAIN ),
+				'form_id'          => __( 'Form ID', 'wps' ),
+				'date_updated'     => __( 'Date Updated', 'wps' ),
+				'currency'         => __( 'Currency', 'wps' ),
+				'payment_method'   => __( 'Payment Method', 'wps' ),
+				'transaction_type' => __( 'Transaction Type', 'wps' ),
+				'status'           => __( 'Status', 'wps' ),
 			);
 		}
 
@@ -320,7 +320,7 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
 			foreach ( $entries as $entry ) {
 				$item = array(
 					'group_id'    => 'gravityforms',
-					'group_label' => __( 'Gravity Forms', WPSCORE_PLUGIN_DOMAIN ),
+					'group_label' => __( 'Gravity Forms', 'wps' ),
 					'item_id'     => 'gravityforms-entries-' . $entry['id'],
 					'data'        => array(),
 				);
@@ -367,7 +367,7 @@ if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
 		 */
 		function register_gdpr_exporter( $exporters ) {
 			$exporters['wps-gravityforms'] = array(
-				'exporter_friendly_name' => __( 'Gravity Forms', WPSCORE_PLUGIN_DOMAIN ),
+				'exporter_friendly_name' => __( 'Gravity Forms', 'wps' ),
 				'callback'               => array( $this, 'gdpr_exporter' ),
 			);
 
