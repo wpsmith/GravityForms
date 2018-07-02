@@ -1,20 +1,19 @@
 <?php
 
-
-namespace WPS\Plugins;
+namespace WPS\Plugins\GravityForms;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( '\WPS\Plugins\GravityFormsParameterUser' ) ) {
+if ( ! class_exists( '\WPS\Plugins\GravityForms\ParameterUser' ) ) {
 	/**
 	 * Class GravityFormsParameterUser
 	 *
 	 * @package WPS\Plugins
 	 */
-	class GravityFormsParameterUser {
+	class ParameterUser {
 
 		/**
 		 * \WP_User key.

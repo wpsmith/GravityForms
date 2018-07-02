@@ -1,20 +1,19 @@
 <?php
 
-
-namespace WPS\Plugins;
+namespace WPS\Plugins\GravityForms;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( '\WPS\Plugins\GravityFormsParameter' ) ) {
+if ( ! class_exists( '\WPS\Plugins\GravityForms\Parameter' ) ) {
 	/**
 	 * Class GravityFormsParameter
 	 *
 	 * @package WPS\Plugins
 	 */
-	class GravityFormsParameter {
+	class Parameter {
 
 		/**
 		 * Paramter slug.

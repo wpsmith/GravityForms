@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WPS\Plugins;
+namespace WPS\Plugins\GravityForms;
 
 use WPS;
 
@@ -10,13 +10,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( '\WPS\Plugins\GravityFormsPersonalData' ) ) {
+if ( ! class_exists( '\WPS\Plugins\GravityForms\PersonalData' ) ) {
 	/**
 	 * Class GravityFormsPersonalData
 	 *
 	 * @package WPS\Plugins
 	 */
-	class GravityFormsPersonalData extends WPS\Core\Singleton {
+	class PersonalData extends WPS\Core\Singleton {
 
 		/**
 		 * Array of Keys

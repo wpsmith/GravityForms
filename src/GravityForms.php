@@ -17,7 +17,7 @@
  * @since      0.1.0
  */
 
-namespace WPS\Plugins;
+namespace WPS\Plugins\GravityForms;
 
 use WPS\Core\Singleton;
 
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WPS\Plugins\GravityForms' ) ) {
+if ( ! class_exists( 'WPS\Plugins\GravityForms\GravityForms' ) ) {
 	/**
 	 * Class Gravity_Forms
 	 *
