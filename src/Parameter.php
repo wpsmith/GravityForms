@@ -20,14 +20,14 @@ if ( ! class_exists( '\WPS\Plugins\GravityForms\Parameter' ) ) {
 		 *
 		 * @var string
 		 */
-		private $parameter;
+		protected $parameter;
 
 		/**
 		 * Value or Callback.
 		 *
 		 * @var string|callable
 		 */
-		private $value_or_callback;
+		protected $value_or_callback;
 
 		/**
 		 * GravityFormsParameter constructor.
@@ -35,9 +35,9 @@ if ( ! class_exists( '\WPS\Plugins\GravityForms\Parameter' ) ) {
 		 * @param string          $parameter         Parameter.
 		 * @param string|callable $value_or_callback Callback to set the value or value.
 		 */
-		public function __construct( $parameter, $value_or_callback ) {
+		public function __construct( $parameter = '', $value_or_callback = null ) {
 
-			if ( ! is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
+			if ( function_exists( 'is_plugin_active' ) && ! is_plugin_active( 'gravityforms/gravityforms.php' ) ) {
 				return;
 			}
 
