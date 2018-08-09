@@ -17,19 +17,20 @@
  * @since      0.1.0
  */
 
-namespace WPS\Plugins\GravityForms\CPT;
+namespace WPS\Plugins\GravityForms;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WPS\Plugins\GravityForms\CPT\MergeTags' ) ) {
+if ( ! class_exists( 'WPS\Plugins\GravityForms\AdvancedMergeTags' ) ) {
 	/**
 	 * Class AdvancedMergeTags.
 	 *
 	 * To use: `{post_meta:id=get(id)&meta_key=CUSTOM-FIELD}`
 	 * @link    http://www.jennybeaumont.com/custom-field-merge-tags-gravity-forms/
+	 * @link    https://gist.github.com/spivurno/5850937
 	 *
 	 * @package WPS\Plugins\GravityForms\CPT Core Feed registered object.
 	 */
