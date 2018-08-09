@@ -21,7 +21,8 @@
   "require": {
     "php": ">=5.2.4",
     "wpsmith/plugin": "dev-master",
-    "wpsmith/singleton": "^0.0.2"
+    "wpsmith/singleton": "^0.0.2",
+    "wpsmith/gravityformsmergetags": "^0.0.3"
   },
   "autoload": {
     "psr-4": {
