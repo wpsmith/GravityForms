@@ -11,7 +11,7 @@
     {
       "name": "Travis Smith",
       "email": "t@wpsmith.net",
-      "homepage": "http://wpsmith.net/",
+      "homepage": "https://wpsmith.net/",
       "role": "Developer"
     }
   ],
@@ -19,14 +19,14 @@
     "issues": "https://github.com/wpsmith/GravityForms/issues"
   },
   "require": {
-    "php": ">=5.2.4",
+    "php": ">=5.6.0",
     "wpsmith/plugin": "dev-master",
-    "wpsmith/singleton": "^0.0.2",
+    "wpsmith/singleton": "^1.0.0",
     "wpsmith/gravityformsmergetags": "^0.0.6"
   },
   "autoload": {
     "psr-4": {
-      "WPS\\Plugins\\GravityForms\\": "src/"
+      "WPS\\WP\\Plugins\\GravityForms\\": "src/"
     }
   }
 }

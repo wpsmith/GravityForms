@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WPS\Plugins\GravityForms;
+namespace WPS\WP\Plugins\GravityForms;
 
 use WPS;
 
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( '\WPS\Plugins\GravityForms\PersonalData' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\PersonalData' ) ) {
 	/**
 	 * Class GravityFormsPersonalData
 	 *
